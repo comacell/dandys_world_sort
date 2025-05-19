@@ -27,28 +27,12 @@ var maxRows = 35;
 // * タイトル情報（編集可能。最後の行に”,”を付けないようにしてください）
 var int_Colspan = 3;
 var ary_TitleData = [
-   "Embodiment of Scarlet Devil",
-   "Perfect Cherry Blossom",
-   "Immaterial and Missing Power",
-   "Imperishable Night",
-   "Phantasmagoria of Flower View",
-   "Shoot the Bullet",
-   "Mountain of Faith",
-   "Scarlet Weather Rhapsody",
-   "Subterranean Animism",
-   "Touhou Hisoutensoku",
-   "Undefined Fantastic Object",
-   "Double Spoiler",
-   "Great Fairy Wars",
-   "Ten Desires",
-   "Hopeless Masquerade",
-   "Double Dealing Character",
-   "Books and CDs",
-   "The Highly Responsive to Prayers",
-   "The Story of Eastern Wonderland",
-   "Phantasmagoria of Dim.Dream",
-   "Lotus Land Story",
-   "Mystic Square",
+   "Main Toons",
+   "Regular Toons",
+   "Holiday Toons",
+   "Main Twisteds",
+   "Regular Twisteds",
+   "Holiday Twisteds",
    "Others"
 ];
 
