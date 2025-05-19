@@ -10,8 +10,8 @@
 //   "キャラクター名", "画像（空白の場合、キャラクター名が使用されます）"
 //                                      [1,2,3,4,5,6,7,8,9,
 var ary_CharacterData = [
-  [1, "Dandy", [1,0,0,0,0,0,0], "https://github.com/ibroquentin/dandys_world_sort/blob/master/Touhou%20Character%20Sorting_files/Dandy_Render.png"],
-  [1, "Astro", [1,0,0,0,0,0,0], "https://github.com/ibroquentin/dandys_world_sort/blob/master/Touhou%20Character%20Sorting_files/Astro_Render.png"],
+  [1, "Dandy", [1,0,0,0,0,0,0], "https://i.imgur.com/LzZgpwW.png"],
+  [1, "Astro", [1,0,0,0,0,0,0], "https://i.imgur.com/yXSIjqw.png"],
   [1, "Sprout", [1,0,0,0,0,0,0], "https://github.com/ibroquentin/dandys_world_sort/blob/master/Touhou%20Character%20Sorting_files/Sprout_Render.png"],
   [1, "Pebble", [1,0,0,0,0,0,0], "https://github.com/ibroquentin/dandys_world_sort/blob/master/Touhou%20Character%20Sorting_files/Pebble_Render.png"],
   [1, "Shelly", [1,0,0,0,0,0,0], "https://github.com/ibroquentin/dandys_world_sort/blob/master/Touhou%20Character%20Sorting_files/Shelly_Render.png"],
@@ -42,7 +42,8 @@ var ary_CharacterData = [
   [1, "Flyte", [0,0,1,0,0,0,0], "https://github.com/ibroquentin/dandys_world_sort/blob/master/Touhou%20Character%20Sorting_files/Flyte_Render.png"],
   [1, "Coal", [0,0,1,0,0,0,0], "https://github.com/ibroquentin/dandys_world_sort/blob/master/Touhou%20Character%20Sorting_files/Coal_Render.png"],
   [1, "Ginger", [0,0,1,0,0,0,0], "https://github.com/ibroquentin/dandys_world_sort/blob/master/Touhou%20Character%20Sorting_files/Ginger_Render.png"],
-  [1, "Rudie", [0,0,1,0,0,0,0], "https://github.com/ibroquentin/dandys_world_sort/blob/master/Touhou%20Character%20Sorting_files/Rudie_Render.png"]
+  [1, "Rudie", [0,0,1,0,0,0,0], "https://github.com/ibroquentin/dandys_world_sort/blob/master/Touhou%20Character%20Sorting_files/Rudie_Render.png"],
+   [1, "Nagito Komaeda", [0,0,0,0,0,0,1], "https://i.imgur.com/okMUMbY.png"],
   [1, "Twisted Dandy", [0,0,0,1,0,0,0], "Touhou Character Sorting_files/Twisted_Dandy_Render.png"],
   [1, "Twisted Astro", [0,0,0,1,0,0,0], "Touhou Character Sorting_files/Twisted_Astro_Render.png"],
   [1, "Twisted Sprout", [0,0,0,1,0,0,0], "Touhou Character Sorting_files/Twisted_Sprout_Render.png"],
