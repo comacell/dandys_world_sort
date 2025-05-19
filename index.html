@@ -1,1 +1,130 @@
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en"><head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <link rel="shortcut icon" href="https://github.com/ibroquentin/dandys_world_sort/blob/master/Touhou%20Character%20Sorting_files/Dandy_Render.png?raw=true" type="image/x-icon">
+  <link rel="icon" href="https://github.com/ibroquentin/dandys_world_sort/blob/master/Touhou%20Character%20Sorting_files/Dandy_Render.png?raw=true" type="image/x-icon">
+  <meta name="author" content="komaki">
+  <meta name="description" content="Dandy's World Character Sorting">
+  <meta name="keywords" content="">
+  <meta name="generator" content="notepad"><title>Dandy's World Character Sorting</title>  
+  
+<script src="https://raw.githubusercontent.com/ibroquentin/dandys_world_sort/master/Touhou%20Character%20Sorting_files/mod_k-factory.js"></script>
+<script src="https://raw.githubusercontent.com/ibroquentin/dandys_world_sort/master/Touhou%20Character%20Sorting_files/fnc_main_v3.js"></script>
+<script src="https://raw.githubusercontent.com/ibroquentin/dandys_world_sort/master/Touhou%20Character%20Sorting_files/fnc_data_v2.js"></script>
+<script src="https://raw.githubusercontent.com/ibroquentin/dandys_world_sort/master/Touhou%20Character%20Sorting_files/op.js"></script>
+  <style type="text/css">
+<!--
+.style4 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-weight: normal;
+	font-size: 11px;
+}
+a:link {
+	color: #990000;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+a:visited {
+	text-decoration: none;
+	color: #6600FF;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+a:hover {
+	text-decoration: none;
+	color: #FF6600;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+a:active {
+	text-decoration: none;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+-->
+  </style>
+  </head><body onload="startup()">
+  <div align="center">
+   <table id="mainTable">
+    <thead>
+     <tr>
+      <td colspan="3" class="tb_header">Battle No. <span id="lblCount">-</span><br>
+       <span id="lblProgress">0</span>% sorted.<br>
+       <div align="center"><span id="GaGprog"></span></div>
+      </td>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+<td id="fldRight" onclick="fnc_Sort(1);" rowspan="2">
+  <img src="https://github.com/comacell/dandys_world_sort/blob/960a2cf8aa8e00ea2f90afa861665404acc22216/Touhou%20Character%20Sorting_files/Poppy_Render.png?raw=true" style="max-width: 150px;">
+</td>
+	  <td style="border: 0px; width: 7px;" rowspan="2"></td>
+      <td id="fldMiddleT" onclick="fnc_Sort(0);"><p>Dandy's World</p>
+        <p> Character Sorter</p></td>
+	  <td style="border: 0px; width: 7px;" rowspan="2"></td>
+<td id="fldRight" onclick="fnc_Sort(1);" rowspan="2">
+  <img src="https://github.com/comacell/dandys_world_sort/blob/960a2cf8aa8e00ea2f90afa861665404acc22216/Touhou%20Character%20Sorting_files/Boxten_Render.png?raw=true" style="max-width: 150px;">
+</td>
+     </tr>
+     <tr>
+      <td id="fldMiddleB" onclick="fnc_Undo();">Click to start!</td>
+     </tr>
+    </tbody>
+    <tfoot>
+     <tr>
+      <td colspan="3"><div align="center">
+        <input id="optImage" checked="checked" type="checkbox">
+        <span class="tb_header">Display images while sorting
+          
+        </span></div></td>
+     </tr>
+    </tfoot>
+
+   </table>
+  </div>
+  <br>
+   <table id="optTable" align="center" width="450"><tbody><tr id="optSelRow0"><td><input id="optSelect0" title="Main Toons" value="Main Toons" checked="checked" type="checkbox"><span class="cbox" id="0" title="Main Toons">Main Toons</span></td><td><input id="optSelect1" title="Regular Toons" value="Regular Toons" checked="checked" type="checkbox"><span class="cbox" id="1" title="Regular Toons">Regular Toons</span></td><td><input id="optSelect2" title="Holiday Toons" value="Holiday Toons" checked="checked" type="checkbox"><span class="cbox" id="2" title="Holiday Toons">Holiday Toons</span></td></tr><tr id="optSelRow3"><td><input id="optSelect3" title="Main Twisteds" value="Main Twisteds" checked="checked" type="checkbox"><span class="cbox" id="3" title="Main Twisteds">Main Twisteds</span></td><td><input id="optSelect4" title="Regular Twisteds" value="Regular Twisteds" checked="checked" type="checkbox"><span class="cbox" id="4" title="Regular Twisteds">Regular Twisteds</span></td><td><input id="optSelect5" title="Holiday Twisteds" value="Holiday Twisteds" checked="checked" type="checkbox"><span class="cbox" id="5" title="Holiday Twisteds">Holiday Twisteds</span></td></tr><tr id="optSelRow6"><td><input id="optSelect22" title="Others" value="Others" checked="checked" type="checkbox"><span class="cbox" id="22" title="Others">Others</span></td></tr></tbody><tfoot><tr class="opt_foot"><td colspan="3"><input id="optSelect_all" title="All boxes are checked/unchecked at the same time." value="All" checked="checked" type="checkbox"><span>Select All</span></td></tr></tfoot></table>
+  <br>
+  <div id="ranTable" width="640px" class="tb" style="display:none;" align="center">
+<div>
+<form>
+	  <p class="style7">FF16+ users: Shift+F2, type in "screenshot --fullpage filename.png".</p>
+      <input value="Raw Text Results" onclick="OpenWnd()" type="button">
+</form> 	
+</div>
+</div>
+  <div class="style4" id="resultField" style="text-align:center;">
+    <p class="style7">Sorter for Dandy's World characters. Pick your sources, and hit the Start button.<br>
+Click on the character you like better from the two, or tie them if you like them equally or don't know them.<br>
+Depending on how many sources you pick, you'll get up to 746 picks, so set aside a good few cups of tea for this.<br>
+There'll be a table at the end of the picks with your favorites sorted 
+out, plus a button to click for raw text to copy and paste.<br>
+<br>
+Sick and tired of the <a href="http://www.freewebs.com/tohosort/">original English sorter</a> not being updated so I slapped on an update.<br>
+Also was kind of irked by the inconsistency of the art, which might 
+influence close decisions. Picked out alphes' style and stuck with it.<br>
+Original credit: Made by <a href="http://mainyan.sakura.ne.jp/thsort.html">haru from E-Phantasm</a>. Scripts by <a href="http://kouga.net/">migiwa from K-Factory</a>.<br><br>
+Apparently AT&amp;T is blocking comoj. Or something. I don't know. USA USA USA USA USA USA<br><br>
+5/18/25 started working on it hehe!!!!.<br>
+<br><a href="https://x.com/SIGMANAUSEA9999">my twitter</a> to contact for updates!</p>
+<br>
+
+
+
+<script type="text/javascript" src="https://github.com/ibroquentin/dandys_world_sort"></script>
+<!-- End Of Analytics Code -->
+</body></html>
+<!-- Hosting24 Analytics Code -->
